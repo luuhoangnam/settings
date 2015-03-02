@@ -3,6 +3,7 @@
 namespace Namest\Settings;
 
 use Illuminate\Support\ServiceProvider;
+use Namest\Settings\Contracts\Settings\Repository as SettingContract;
 
 /**
  * Class SettingsServiceProvider
@@ -34,6 +35,8 @@ class SettingsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // TODO: Implement register() method.
+        $this->app->singleton(SettingContract::class, function () {
+            return new Repository;
+        });
     }
 }
