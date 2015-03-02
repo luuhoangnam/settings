@@ -36,7 +36,10 @@ class SettingsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(SettingContract::class, function () {
-            return new Repository;
+            $settings = new Repository;
+            $settings->preload();
+
+            return $settings;
         });
     }
 }
