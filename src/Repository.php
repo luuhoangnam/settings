@@ -3,7 +3,7 @@
 namespace Namest\Settings;
 
 use ArrayAccess;
-use Namest\Settings\Contracts\Settings\Repository as SettingContract;
+use Namest\Settings\Contracts\Repository as SettingContract;
 
 /**
  * Class Repository

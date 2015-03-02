@@ -1,6 +1,6 @@
 <?php
 
-namespace Namest\Settings\Contracts\Settings;
+namespace Namest\Settings\Contracts;
 
 /**
  * Interface Repository
