@@ -3,7 +3,7 @@
 namespace Namest\Settings;
 
 use Illuminate\Support\ServiceProvider;
-use Namest\Settings\Contracts\Settings\Repository as SettingContract;
+use Namest\Settings\Contracts\Repository as SettingContract;
 
 /**
  * Class SettingsServiceProvider
