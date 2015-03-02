@@ -22,7 +22,7 @@ return [
     ...
     'aliases' => [
         ...
-        'Setting'   => 'Namest\Settings\Facades\Setting',
+        'Setting' => 'Namest\Settings\Facades\Setting',
     ],
 ];
 ```
