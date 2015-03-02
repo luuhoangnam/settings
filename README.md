@@ -96,9 +96,10 @@ isset($settings[$key]);
 array_key_exists($key, $settings);
 
 // Get setting value from key
-Setting::get($key, $default);
-$settings[$key];
-$settings->$key; // Example: $limit = $settings->limit;
+Setting::get($key, $default); // Via facade
+setting($key, $default); // Via helper function
+$settings[$key]; // Via array access
+$settings->$key; // Via object access. Example: $limit = $settings->limit;
 
 // Set setting value
 Setting::set($key, $value);
