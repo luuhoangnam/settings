@@ -7,6 +7,6 @@ if ( ! function_exists('setting')) {
      */
     function setting($key, $default = null)
     {
-        return app(Namest\Settings\Contracts\Repository::class)->get($key, $default);
+        return app('settings')->get($key, $default);
     }
 }
