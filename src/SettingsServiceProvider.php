@@ -42,9 +42,5 @@ class SettingsServiceProvider extends ServiceProvider
 
             return $settings;
         });
-
-        $this->app->singleton('Namest\Settings\Contracts\Repository', function () {
-            $this->app->make('settings');
-        });
     }
 }
