@@ -3,7 +3,6 @@
 namespace Namest\Settings;
 
 use Illuminate\Support\ServiceProvider;
-use Namest\Settings\Contracts\Repository as SettingContract;
 
 /**
  * Class SettingsServiceProvider
@@ -44,7 +43,7 @@ class SettingsServiceProvider extends ServiceProvider
             return $settings;
         });
 
-        $this->app->singleton(SettingContract::class, function () {
+        $this->app->singleton('Namest\Settings\Contracts\Repository', function () {
             $this->app->make('settings');
         });
     }
