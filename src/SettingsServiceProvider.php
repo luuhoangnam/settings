@@ -36,7 +36,7 @@ class SettingsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('settings', function () {
+        $this->app->bind('settings', function () {
             $settings = new Repository;
             $settings->preload();
 
