@@ -42,5 +42,9 @@ class SettingsServiceProvider extends ServiceProvider
 
             return $settings;
         });
+
+        $this->app->bind('Namest\Settings\Contracts\Repository', function () {
+            $this->app->make('settings');
+        });
     }
 }
