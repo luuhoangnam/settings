@@ -37,11 +37,15 @@ class SettingsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(SettingContract::class, function () {
+        $this->app->singleton('settings', function () {
             $settings = new Repository;
             $settings->preload();
 
             return $settings;
+        });
+
+        $this->app->singleton(SettingContract::class, function () {
+            $this->app->make('settings');
         });
     }
 }
