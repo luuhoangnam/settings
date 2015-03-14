@@ -41,9 +41,9 @@ class SettingsServiceProvider extends ServiceProvider
 
             return $settings;
         });
-        dd($this->app->make('settings'));
+
         $this->app->singleton(Settings::class, function () {
-            $this->app->make('settings');
+            return $this->app->make('settings');
         });
 
         include_once __DIR__ . '/helpers.php';
