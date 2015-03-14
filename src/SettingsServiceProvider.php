@@ -42,7 +42,7 @@ class SettingsServiceProvider extends ServiceProvider
             return $settings;
         });
 
-        $this->app->bind(Settings::class, function () {
+        $this->app->singleton(Settings::class, function () {
             $this->app->make('settings');
         });
 
