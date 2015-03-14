@@ -25,8 +25,6 @@ class SettingsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../database/migrations/' => base_path('/database/migrations')
         ], 'migrations');
-
-        include_once __DIR__ . '/helpers.php';
     }
 
     /**
@@ -46,5 +44,7 @@ class SettingsServiceProvider extends ServiceProvider
 //        $this->app->bind('Namest\Settings\Contracts\Repository', function () {
 //            $this->app->make('settings');
 //        });
+
+        include_once __DIR__ . '/helpers.php';
     }
 }
