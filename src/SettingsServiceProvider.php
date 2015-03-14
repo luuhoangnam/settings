@@ -3,6 +3,7 @@
 namespace Namest\Settings;
 
 use Illuminate\Support\ServiceProvider;
+use Namest\Settings\Repository as Settings;
 
 /**
  * Class SettingsServiceProvider
@@ -41,9 +42,9 @@ class SettingsServiceProvider extends ServiceProvider
             return $settings;
         });
 
-//        $this->app->bind('Namest\Settings\Contracts\Repository', function () {
-//            $this->app->make('settings');
-//        });
+        $this->app->bind(Settings::class, function () {
+            $this->app->make('settings');
+        });
 
         include_once __DIR__ . '/helpers.php';
     }
